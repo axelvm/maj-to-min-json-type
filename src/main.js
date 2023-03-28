@@ -25,7 +25,7 @@ function changeContent(content) {
   const minTypes = ["string", "object", "boolean", "array", "number"];
   let newContent = content;
   for (let i = 0; i < majTypes.length; i++) {
-    newContent.replace(majTypes[i], minTypes[i]);
+    newContent = newContent.replaceAll(majTypes[i], minTypes[i]);
   }
   return newContent;
 }
